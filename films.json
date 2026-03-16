@@ -1,65 +1,191 @@
 [
   {
-    "wikidata_id": "Q136334461",
-    "title": "What Happens at Night",
-    "year": "",
-    "genre": "http://www.wikidata.org/entity/Q109629396",
-    "director": "http://www.wikidata.org/entity/Q41148"
-  },
-  {
     "wikidata_id": "Q22272",
     "title": "Santa Barbara",
     "year": "",
-    "genre": "http://www.wikidata.org/entity/Q23739",
-    "director": null
+    "genres": [
+      "soap opera"
+    ],
+    "director": {
+      "name": null,
+      "birthDate": "",
+      "wikidata_id": ""
+    },
+    "cast": [
+      {
+        "name": "Leonardo DiCaprio",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
     "wikidata_id": "Q25188",
     "title": "Inception",
     "year": "2010",
-    "genre": "http://www.wikidata.org/entity/Q130232",
-    "director": "http://www.wikidata.org/entity/Q25191"
+    "genres": [
+      "drama film"
+    ],
+    "director": {
+      "name": "Christopher Nolan",
+      "birthDate": "",
+      "wikidata_id": "Q25191"
+    },
+    "cast": [
+      {
+        "name": "Leonardo DiCaprio",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
+  },
+  {
+    "wikidata_id": "Q25188",
+    "title": "Inception",
+    "year": "2010",
+    "genres": [
+      "drama film"
+    ],
+    "director": {
+      "name": "Christopher Nolan",
+      "birthDate": "",
+      "wikidata_id": "Q25191"
+    },
+    "cast": [
+      {
+        "name": "Leonardo DiCaprio",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
     "wikidata_id": "Q26265",
     "title": "Cool World",
     "year": "1992",
-    "genre": "http://www.wikidata.org/entity/Q157394",
-    "director": "http://www.wikidata.org/entity/Q315441"
+    "genres": [
+      "fantasy film"
+    ],
+    "director": {
+      "name": "Ralph Bakshi",
+      "birthDate": "",
+      "wikidata_id": "Q315441"
+    },
+    "cast": [
+      {
+        "name": "Brad Pitt",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
     "wikidata_id": "Q26265",
     "title": "Cool World",
     "year": "1992",
-    "genre": "http://www.wikidata.org/entity/Q157394",
-    "director": "http://www.wikidata.org/entity/Q315441"
+    "genres": [
+      "fantasy film"
+    ],
+    "director": {
+      "name": "Ralph Bakshi",
+      "birthDate": "",
+      "wikidata_id": "Q315441"
+    },
+    "cast": [
+      {
+        "name": "Brad Pitt",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
     "wikidata_id": "Q26265",
     "title": "Cool World",
     "year": "1992",
-    "genre": "http://www.wikidata.org/entity/Q157394",
-    "director": "http://www.wikidata.org/entity/Q315441"
+    "genres": [
+      "fantasy film"
+    ],
+    "director": {
+      "name": "Ralph Bakshi",
+      "birthDate": "",
+      "wikidata_id": "Q315441"
+    },
+    "cast": [
+      {
+        "name": "Brad Pitt",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
-    "wikidata_id": "Q134773",
-    "title": null,
-    "year": "1994",
-    "genre": "http://www.wikidata.org/entity/Q102429885",
-    "director": "http://www.wikidata.org/entity/Q187364"
+    "wikidata_id": "Q28936",
+    "title": "Cloud Atlas",
+    "year": "2012",
+    "genres": [
+      "drama film"
+    ],
+    "director": {
+      "name": "Tom Tykwer",
+      "birthDate": "",
+      "wikidata_id": "Q57231"
+    },
+    "cast": [
+      {
+        "name": "Tom Hanks",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
-    "wikidata_id": "Q134773",
-    "title": null,
-    "year": "1994",
-    "genre": "http://www.wikidata.org/entity/Q102429885",
-    "director": "http://www.wikidata.org/entity/Q187364"
+    "wikidata_id": "Q28936",
+    "title": "Cloud Atlas",
+    "year": "2012",
+    "genres": [
+      "fantasy film"
+    ],
+    "director": {
+      "name": "Tom Tykwer",
+      "birthDate": "",
+      "wikidata_id": "Q57231"
+    },
+    "cast": [
+      {
+        "name": "Tom Hanks",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   },
   {
-    "wikidata_id": "Q134773",
-    "title": null,
-    "year": "1994",
-    "genre": "http://www.wikidata.org/entity/Q102429885",
-    "director": "http://www.wikidata.org/entity/Q187364"
+    "wikidata_id": "Q28936",
+    "title": "Cloud Atlas",
+    "year": "2012",
+    "genres": [
+      "cyberpunk"
+    ],
+    "director": {
+      "name": "Tom Tykwer",
+      "birthDate": "",
+      "wikidata_id": "Q57231"
+    },
+    "cast": [
+      {
+        "name": "Tom Hanks",
+        "birthDate": "",
+        "role": "",
+        "wikidata_id": ""
+      }
+    ]
   }
 ]
