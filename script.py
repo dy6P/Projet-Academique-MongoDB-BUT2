@@ -1,7 +1,8 @@
-import requests
+from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 
 ENDPOINT = "https://query.wikidata.org/sparql"
+sparql = SPARQLWrapper(ENDPOINT)
 
 ACTORS = [
     "Leonardo DiCaprio",
@@ -9,30 +10,25 @@ ACTORS = [
     "Tom Hanks"
 ]
 
-def sparql_query(query):
-    response = requests.get(
-        ENDPOINT,
-        params = {"query": query, "format": "json"},
-        headers = {"User-Agent": "AcademicProject/1.0"}
-    )
-    return response.json()
-
 def actor_query(actor_name):
-    return f"""
-    SELECT ?id ?title ?date
-           ?genre
-           ?director
+    query = f"""
+    SELECT ?id ?title ?date ?genre ?director
     WHERE {{
         ?actor rdfs:label "{actor_name}"@en .
         ?id wdt:P161 ?actor .
-        ?id wdt:P166 ?award .
+        OPTIONAL {{ ?id rdfs:label ?title FILTER (lang(?title)="en") }}
         OPTIONAL {{ ?id wdt:P577 ?date }}
         OPTIONAL {{ ?id wdt:P136 ?genre }}
         OPTIONAL {{ ?id wdt:P57 ?director }}
     }}
     LIMIT 3
     """
+    return query
 
+def sparql_query(query):
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    return sparql.query().convert()
 
 def main():
     films = []
@@ -49,7 +45,7 @@ def main():
             }
             films.append(film)
     with open("films.json", "w") as f:
-        json.dump(films, f, indent=True)
+        json.dump(films, f, indent=2)
 
 if __name__ == "__main__":
     main()
