@@ -26,6 +26,7 @@ def recuperer_tout(nom_acteur):
             ?declaration ps:P161 ?membreCasting .
             OPTIONAL {{ ?membreCasting wdt:P569 ?membreNaissance }}
             OPTIONAL {{ ?declaration pq:P453 ?role }}
+            FILTER EXISTS {{ ?declaration pq:P453 ?role }}
         }}
         SERVICE wikibase:label {{ bd:serviceParam wikibase:language "fr,en". }}
     }}
