@@ -1,9 +1,15 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
+from pymongo import MongoClient
 import json
 
 ENDPOINT = "https://query.wikidata.org/sparql"
 sparql = SPARQLWrapper(ENDPOINT)
+sparql.addCustomHttpHeader("User-Agent", "FilmDB/1.0 (educational project; python)")
+
 ACTEURS = ["Leonardo DiCaprio", "Brad Pitt", "Tom Hanks", "Meryl Streep"]
+
+MONGO_URI = "mongodb+srv://dy6P:R0Vasa27AtTnzrcC@cluster0.t6lor66.mongodb.net/?appName=Cluster0"
+
 
 def recuperer_tout(nom_acteur):
     requete = f"""
@@ -81,8 +87,18 @@ def main():
         for id_film, doc in films.items():
             if id_film not in tous_les_films:
                 tous_les_films[id_film] = doc
+
+    liste_films = list(tous_les_films.values())
+
     with open("films.json", "w", encoding="utf-8") as f:
-        json.dump(list(tous_les_films.values()), f, indent=True, ensure_ascii=False)
+        json.dump(liste_films, f, indent=2, ensure_ascii=False)
+
+    client = MongoClient(MONGO_URI)
+    db = client["cinemaDB"]
+    collection = db["films"]
+    collection.drop()
+    collection.insert_many(liste_films)
+    print(f"{len(liste_films)} films insérés dans MongoDB.")
 
 
 if __name__ == "__main__":
